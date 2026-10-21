@@ -89,7 +89,11 @@ export default async function handler(
             try {
                 const uaccessDataForUser = fs.readFileSync('.uaccess', 'utf-8')
                     .replace(/[\n\r]/g, '\n').split('\n')
-                    .filter(a=>user.display_name === a || `${user.display_name}:dev` === a)
+                    .filter(a=>{
+                        const name = user.display_name.toLowerCase()
+                        const entry = a.trim().toLowerCase()
+                        return entry === name || entry === `${name}:dev`
+                    })
                 if(uaccessDataForUser.length === 1){
                     e = uaccessDataForUser[0].endsWith(':dev') ? 3 : 2;
                 }

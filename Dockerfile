@@ -7,6 +7,6 @@ USER $UID:$GID
 WORKDIR /noita-together
 ADD --chown=$UID:$GID . .
 RUN yarn install
-ARG NEXT_PUBLIC_LOBBY_SERVER_API_URL_BASE=https://lobby.noitatogether.com/api
+ARG NEXT_PUBLIC_LOBBY_SERVER_API_URL_BASE=https://noita-lobby.rayyrawr.me/api
 RUN yarn buildServer
 CMD ["bash", "-c", "yarn server-http"]

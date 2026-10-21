@@ -73,7 +73,7 @@ function FindGameFolder() {
     })
 }
 // Constants
-const AutoUpdateServers = ['https://raw.githubusercontent.com/Noita-Together/noita-together/'];
+const AutoUpdateServers = ['https://raw.githubusercontent.com/Rayyrawr/noita-together/'];
 
 // Implementation
 function forcedirSync(dir) {
