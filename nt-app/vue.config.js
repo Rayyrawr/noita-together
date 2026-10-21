@@ -15,7 +15,7 @@ module.exports = {
                     oneClick: false,
                     allowToChangeInstallationDirectory: true
                 },
-                publish: ["github"]
+                publish: [{ provider: "github", owner: "Rayyrawr", repo: "noita-together" }]
             }
         }
     },
